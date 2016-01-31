@@ -41,11 +41,12 @@
     "node >= 0.6.0"
   ],
   "devDependencies": {
+    "nock": "~1.1.0",
     "nodeunit": "~0.9.1",
-    "sinon": "~1.13.0",
-    "nock": "~1.1.0"
+    "sinon": "~1.13.0"
   },
   "dependencies": {
+    "buffer": "^4.4.0",
     "request": "^2.61.0"
   }
 }

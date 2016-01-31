@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "sourceMap": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "files": [
+        "openid.ts",
+        "lib/convert.ts",
+        "lib/xrds.ts"
+    ]
+}
