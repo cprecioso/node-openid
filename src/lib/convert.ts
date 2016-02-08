@@ -25,25 +25,31 @@
  * -*- Mode: JS; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*-
  * vim: set sw=2 ts=2 et tw=80 :
  */
-"use strict";
-var buffer_1 = require("buffer");
-exports.btwoc = function (i) {
+
+import {Buffer} from "buffer"
+
+module Convert {
+  export let btwoc = function (i: string) {
     if (i.charCodeAt(0) > 127) {
-        return String.fromCharCode(0) + i;
+      return String.fromCharCode(0) + i
     }
-    return i;
-};
-exports.unbtwoc = function (i) {
+    return i
+  }
+
+  export let unbtwoc = function (i: string) {
     if (i[0] === String.fromCharCode(0)) {
-        return i.substr(1);
+      return i.substr(1)
     }
-    return i;
-};
-exports.base64 = {
-    encode: function (bin) {
-        return new buffer_1.Buffer(bin, 'binary').toString('base64');
+    return i
+  }
+
+  export let base64 = {
+    encode: function (bin: string): string {
+      return new Buffer(bin, 'binary').toString('base64')
     },
-    decode: function (b64) {
-        return new buffer_1.Buffer(b64, 'base64').toString('binary');
+    decode: function (b64: string): string {
+      return new Buffer(b64, 'base64').toString('binary')
     }
-};
+  }
+}
+export = Convert

@@ -23,7 +23,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  */
 
-var openid = require('./openid');
+var openid = require('./dist/openid');
 var url = require('url');
 var querystring = require('querystring');
 

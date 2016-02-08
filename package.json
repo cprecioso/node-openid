@@ -18,6 +18,10 @@
     "email": "havard.stranden@gmail.com",
     "web": "http://ox.no"
   },
+  "files": [
+    "dist/",
+    "typings.json"
+  ],
   "version": "2.0.0",
   "repository": {
     "type": "git",
@@ -31,9 +35,9 @@
     }
   ],
   "directories": {
-    "lib": "./lib"
+    "lib": "dist/lib"
   },
-  "main": "./openid.js",
+  "main": "dist/openid.js",
   "scripts": {
     "test": "nodeunit test/"
   },

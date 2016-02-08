@@ -23,7 +23,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  */
 
-var xrds = require('../lib/xrds');
+var xrds = require('../dist/lib/xrds');
 
 exports.testXrdsSampleParse = function(test)
 {

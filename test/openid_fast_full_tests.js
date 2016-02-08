@@ -23,7 +23,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  */
 
-var openid = require('../openid'),
+var openid = require('../dist/openid'),
     nock = require('nock');
 
 exports.setUp = function (callback) {

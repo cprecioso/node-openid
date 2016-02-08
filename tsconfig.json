@@ -2,18 +2,20 @@
     "compilerOptions": {
         "target": "es3",
         "module": "commonjs",
+        "declaration": true,
         "noImplicitAny": true,
         "removeComments": false,
         "sourceMap": false,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
-        "allowUnreachableCode": false
+        "allowUnreachableCode": false,
+        "outDir": "dist/"
     },
     "files": [
         "typings/main.d.ts",
         "custom-typings/browserify.d.ts",
-        "openid.ts",
-        "lib/convert.ts",
-        "lib/xrds.ts"
+        "src/openid.ts",
+        "src/lib/convert.ts",
+        "src/lib/xrds.ts"
     ]
 }

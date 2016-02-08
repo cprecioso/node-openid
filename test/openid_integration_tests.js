@@ -25,7 +25,7 @@
 
 var constants = require('constants');
 var https = require('https');
-var openid = require('../openid');
+var openid = require('../dist/openid');
 var sinon = require('sinon');
 
 // OpenSSL seems to have issues with some servers and causes some of the
