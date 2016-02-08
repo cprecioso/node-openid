@@ -6,7 +6,8 @@
         "removeComments": false,
         "sourceMap": false,
         "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true
+        "noFallthroughCasesInSwitch": true,
+        "allowUnreachableCode": false
     },
     "files": [
         "openid.ts",
