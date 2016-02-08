@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "es3",
         "module": "commonjs",
         "noImplicitAny": true,
         "removeComments": false,
@@ -10,6 +10,8 @@
         "allowUnreachableCode": false
     },
     "files": [
+        "typings/main.d.ts",
+        "custom-typings/browserify.d.ts",
         "openid.ts",
         "lib/convert.ts",
         "lib/xrds.ts"

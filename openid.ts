@@ -26,8 +26,6 @@
  * vim: set sw=2 ts=2 et tw=80 :
  */
 
-/// <reference path="typings/main.d.ts" />
-
 import convert = require('./lib/convert')
 import crypto = require('crypto-browserify')
 import request = require('request')

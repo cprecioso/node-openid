@@ -1,0 +1,9 @@
+{
+  "ambientDependencies": {
+    "custom-browserify-modules": "file:custom-typings/browserify.d.ts",
+    "form-data": "github:DefinitelyTyped/DefinitelyTyped/form-data/form-data.d.ts#bb1b99052bf1d697f0368fbff56898bc1f5a525c",
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#aee0039a2d6686ec78352125010ebb38a7a7d743",
+    "request": "github:DefinitelyTyped/DefinitelyTyped/request/request.d.ts#e252a088123eb595d9d772eb373f41c084360278"
+  },
+  "dependencies": {}
+}

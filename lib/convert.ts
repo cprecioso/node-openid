@@ -44,9 +44,9 @@ export let unbtwoc = function (i: string) {
 
 export let base64 = {
   encode: function (bin: string): string {
-    return Buffer(bin, 'binary').toString('base64')
+    return new Buffer(bin, 'binary').toString('base64')
   },
   decode: function (b64: string): string {
-    return Buffer(b64, 'base64').toString('binary')
+    return new Buffer(b64, 'base64').toString('binary')
   }
 }
