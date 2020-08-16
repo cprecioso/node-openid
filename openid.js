@@ -28,7 +28,7 @@
 
 var Buffer = require('buffer').Buffer,
     crypto = require('crypto'),
-    request = require('request'),
+    got = require('got'),
     querystring = require('querystring'),
     url = require('url'),
     xrds = require('./lib/xrds');
@@ -219,16 +219,13 @@ var _get = function (getUrl, params, callback, redirects) {
   var options = {
     url: getUrl,
     maxRedirects: redirects || 5,
-    qs: params,
+    searchParams: params,
     headers: { 'Accept' : 'application/xrds+xml,text/html,text/plain,*/*;q=0.9' }
   };
-  request.get(options, function (error, response, body) {
-    if (error) {
-      callback(error);
-    } else {
-      callback(body, response.headers, response.statusCode);
-    }
-  });
+  got.get(options).then(
+    (res) => callback(res.body, res.headers, res.statusCode),
+    (error) => callback(error)
+  );
 };
 
 var _post = function (postUrl, data, callback, redirects) {
@@ -238,13 +235,10 @@ var _post = function (postUrl, data, callback, redirects) {
     form: data,
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
   };
-  request.post(options, function (error, response, body) {
-    if (error) {
-      callback(error);
-    } else {
-      callback(body, response.headers, response.statusCode);
-    }
-  });
+  got.post(options).then(
+    (res) => callback(res.body, res.headers, res.statusCode),
+    (error) => callback(error)
+  );
 };
 
 var _decodePostData = function(data)
